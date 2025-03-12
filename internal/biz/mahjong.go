@@ -57,6 +57,16 @@ const (
 	Chrysanthemum
 )
 
+// 麻将各类
+const (
+	// 花
+	Flower = iota
+	Honor
+	Suit
+)
+
+type MahjongType struct{}
+
 type MahjongCard struct {
 	Type   int // 0 条 1 饼 2 万 3 东 4 西 5 南 6 北 7 中 8 发 9 白 10 春 11 夏 12 秋 13冬
 	Number int
