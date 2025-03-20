@@ -39,32 +39,24 @@ func (s *Shuffle) GetCards() ([]MahjongTile, error) {
 		case Suit:
 			for i := 1; i <= 9; i++ {
 				for j := 0; j < 4; j++ {
-					cards = append(cards, MahjongTile{Type: Dot, Number: i, Name: strconv.Itoa(i) + "筒"})
-					cards = append(cards, MahjongTile{Type: Bamboo, Number: i, Name: strconv.Itoa(i) + "条"})
-					cards = append(cards, MahjongTile{Type: Character, Number: i, Name: strconv.Itoa(i) + "万"})
+					for k := 0; k < len(SuitCards); k++ {
+						cards = append(cards, MahjongTile{Type: SuitCards[k], Number: i, Name: strconv.Itoa(i) + SuitCardNames[k]})
+					}
 				}
 			}
 		case Honor:
+
 			for j := 0; j < 4; j++ {
-				cards = append(cards, MahjongTile{Type: East, Number: 0, Name: "东"})
-				cards = append(cards, MahjongTile{Type: South, Number: 0, Name: "南"})
-				cards = append(cards, MahjongTile{Type: Wast, Number: 0, Name: "西"})
-				cards = append(cards, MahjongTile{Type: North, Number: 0, Name: "北"})
-				cards = append(cards, MahjongTile{Type: Red, Number: 0, Name: "中"})
-				cards = append(cards, MahjongTile{Type: Green, Number: 0, Name: "发"})
-				cards = append(cards, MahjongTile{Type: White, Number: 0, Name: "白"})
+				for k := 0; k < len(HonorCards); k++ {
+					cards = append(cards, MahjongTile{Type: HonorCards[k], Number: 0, Name: HonorCardNames[k]})
+				}
 			}
 
 		case Flower:
 			for j := 0; j < 4; j++ {
-				cards = append(cards, MahjongTile{Type: Spring, Number: 0, Name: "春"})
-				cards = append(cards, MahjongTile{Type: Summer, Number: 0, Name: "夏"})
-				cards = append(cards, MahjongTile{Type: Autumn, Number: 0, Name: "秋"})
-				cards = append(cards, MahjongTile{Type: Winter, Number: 0, Name: "冬"})
-				cards = append(cards, MahjongTile{Type: Plum, Number: 0, Name: "梅"})
-				cards = append(cards, MahjongTile{Type: Orchid, Number: 0, Name: "兰"})
-				cards = append(cards, MahjongTile{Type: Bamboo01, Number: 0, Name: "竹"})
-				cards = append(cards, MahjongTile{Type: Chrysanthemum, Number: 0, Name: "菊"})
+				for k := 0; k < len(FlowerCards); k++ {
+					cards = append(cards, MahjongTile{Type: FlowerCards[k], Number: 0, Name: FlowerCardNames[k]})
+				}
 			}
 
 		}
