@@ -24,24 +24,24 @@ const (
 
 // 牌型
 const (
-	DotName           = "筒" // 筒牌
-	BambooName        = "条" // 条牌
-	CharacterName     = "萬" // 万牌
-	EastName          = "東" // 东风
-	SouthName         = "南" // 南风
-	WastName          = "西" // 西风
-	NorthName         = "北" // 北风
-	RedName           = "中" // 红中
-	GreenName         = "發" // 发财
-	WhiteName         = "白" // 白板
-	SpringName        = "春" // 春
-	SummerName        = "夏" // 夏
-	AutumnName        = "秋" // 秋
-	WinterName        = "冬" // 冬
-	PlumName          = "梅" // 梅
-	OrchidName        = "蘭" // 兰
-	Bamboo01Name      = "竹" // 竹
-	ChrysanthemumName = "菊" // 菊
+	DotName           = "筒"          // 筒牌
+	BambooName        = "条"          // 条牌
+	CharacterName     = "萬"          // 万牌
+	EastName          = "\U0001F000" // 东风
+	SouthName         = "\U0001F001" // 南风
+	WastName          = "\U0001F002" // 西风
+	NorthName         = "\U0001F003" // 北风
+	RedName           = "\U0001F004" // 红中
+	GreenName         = "\U0001F005" // 发财
+	WhiteName         = "\U0001F006" // 白板
+	SpringName        = "\U0001F026" // 春
+	SummerName        = "\U0001F027" // 夏
+	AutumnName        = "\U0001F028" // 秋
+	WinterName        = "\U0001F029" // 冬
+	OrchidName        = "\U0001F022" // 兰
+	PlumName          = "\U0001F023" // 梅
+	Bamboo01Name      = "\U0001F024" // 竹
+	ChrysanthemumName = "\U0001F025" // 菊
 )
 
 // 麻将种类
@@ -74,6 +74,9 @@ var (
 	SuitCardNames   = []string{DotName, BambooName, CharacterName}
 	HonorCardNames  = []string{EastName, SouthName, WastName, NorthName, RedName, GreenName, WhiteName}
 	FlowerCardNames = []string{SpringName, SummerName, AutumnName, WinterName, PlumName, OrchidName, Bamboo01Name, ChrysanthemumName}
+	DotTiles        = []string{"\U0001F019", "\U0001F01A", "\U0001F01B", "\U0001F01C", "\U0001F01D", "\U0001F01E", "\U0001F01F", "\U0001F020", "\U0001F021"}
+	BambooTiles     = []string{"\U0001F010", "\U0001F011", "\U0001F012", "\U0001F013", "\U0001F014", "\U0001F015", "\U0001F016", "\U0001F017", "\U0001F018"}
+	CharacterTiles  = []string{"\U0001F007", "\U0001F008", "\U0001F009", "\U0001F00A", "\U0001F00B", "\U0001F00C", "\U0001F00D", "\U0001F00E", "\U0001F00F"}
 )
 
 // 麻将

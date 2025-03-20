@@ -5,7 +5,6 @@ package biz
 import (
 	"errors"
 	"math/rand"
-	"strconv"
 )
 
 type Shuffle struct {
@@ -40,7 +39,17 @@ func (s *Shuffle) GetCards() ([]MahjongTile, error) {
 			for i := 1; i <= 9; i++ {
 				for j := 0; j < 4; j++ {
 					for k := 0; k < len(SuitCards); k++ {
-						cards = append(cards, MahjongTile{Type: SuitCards[k], Number: i, Name: strconv.Itoa(i) + SuitCardNames[k]})
+						name := ""
+						if SuitCards[k] == Dot {
+							name = DotTiles[i-1]
+						}
+						if SuitCards[k] == Bamboo {
+							name = BambooTiles[i-1]
+						}
+						if SuitCards[k] == Character {
+							name = CharacterTiles[i-1]
+						}
+						cards = append(cards, MahjongTile{Type: SuitCards[k], Number: i, Name: name})
 					}
 				}
 			}
