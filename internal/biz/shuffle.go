@@ -18,6 +18,7 @@ func NewShuffle(kinds []MahjongKind) *Shuffle {
 	}
 }
 
+// 洗牌
 func (s *Shuffle) Shuffle() ([]MahjongTile, error) {
 	cards, err := s.GetCards()
 	if err != nil {
@@ -30,6 +31,7 @@ func (s *Shuffle) Shuffle() ([]MahjongTile, error) {
 	return cards, nil
 }
 
+// 根据牌的种类生成牌
 func (s *Shuffle) GetCards() ([]MahjongTile, error) {
 	cards := []MahjongTile{}
 
