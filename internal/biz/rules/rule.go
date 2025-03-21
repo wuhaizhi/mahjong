@@ -28,6 +28,14 @@ type IRule interface {
 
 type BaseRule struct{}
 
+func (b *BaseRule) GetKind() biz.RuleType {
+	return biz.RuleWin
+}
+
+func GetCode() string {
+	return "base_rule"
+}
+
 func (b *BaseRule) GetName() string {
 	return "基本规则"
 }
@@ -43,10 +51,18 @@ func (b *BaseRule) GetDescribe() string {
   `
 }
 
-func (b *BaseRule) GetScore() int {
+func (b *BaseRule) GetPoints() int {
 	return 1
 }
 
-func (b *BaseRule) MatchRule([]biz.MahjongTile) (bool, error) {
+func (b *BaseRule) MatchRule(tiles []biz.MahjongTile) (bool, error) {
 	return false, nil
+}
+
+func (b *BaseRule) GetPriority() int {
+	return 100000
+}
+
+func (b *BaseRule) GetExcludePointKind() []string {
+	return []string{}
 }
